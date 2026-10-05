@@ -1,0 +1,15 @@
+# Override TEMPORÁRIO para mostrar o site a alguém pela internet.
+#
+# Publica a app em http://localhost:3000 para depois encaminhares esse port
+# no separador "Ports" do VS Code (Visibility: Public), ou com um túnel
+# (cloudflared / ngrok).
+#
+# Uso:
+#   docker compose --env-file .env.production -f docker-compose.yml -f docker-compose.share.yml up -d
+#
+# Voltar ao normal (só Caddy):
+#   docker compose --env-file .env.production up -d
+services:
+  app:
+    ports:
+      - "3000:3000"

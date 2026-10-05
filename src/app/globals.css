@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #FFFFFF;
+  --color-surface: #F8F9FA;
+  --color-foreground: #162A5E; /* navy da marca — texto principal em todo o site */
+  --color-muted: #3A4A7A;
+  --color-muted-foreground: #64748B;
+  --color-popover: #FFFFFF;
+  --color-popover-foreground: #162A5E;
+  --color-border: color-mix(in srgb, #162A5E 14%, transparent);
+  --color-primary: #0284c7;
+  --color-shine: #7C90C9;
+
+  /* Paleta da marca: #238AFF azul (botoes) | #233667 navy de contraste. */
+  --color-brand-blue: #238AFF;
+  --color-brand-navy: #233667;
+  --color-brand-deep: #1A2647;
+  --color-brand-glow: #2E77D6;
+
+  /* Fonte unica: a variavel e definida pelo Inter em layout.tsx */
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    /* Fundo branco limpo, sem gradientes decorativos. */
+    background-color: #ffffff;
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Texto alinhado à esquerda em todo o site (leitura web, não documento). */
+  p {
+    text-align: left;
+    hyphens: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-foreground);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-wrap: balance;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Mantidas para compatibilidade: agora são sólidas, sem brilho animado. */
+@utility text-shine {
+  color: var(--color-foreground);
+}
+
+@utility text-shine-light {
+  color: #ffffff;
+}
+
+/* Fundo navy sóbrio (sem luzes radiais). */
+@utility bg-brand-depth {
+  background-color: var(--color-brand-navy);
+}
+
+/* Sombra única e discreta, sem efeito 3D. */
+@utility shadow-3d {
+  box-shadow:
+    0 1px 2px 0 rgb(16 24 40 / 6%),
+    0 12px 32px -16px rgb(16 24 40 / 22%);
+}
+
+@utility shadow-3d-hover {
+  box-shadow:
+    0 2px 4px 0 rgb(16 24 40 / 8%),
+    0 18px 40px -18px rgb(16 24 40 / 28%);
 }

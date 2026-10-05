@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.gitignore
+data
+public/imagens/uploads
+npm-debug.log*
+Dockerfile
+docker-compose.yml
+Caddyfile
+HOSTING.md
+.env*

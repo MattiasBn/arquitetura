@@ -1,0 +1,17 @@
+# O endereço e o TLS vêm de variáveis de ambiente (definidas no .env.production).
+#
+# Produção (VPS):  SITE_ADDRESS=algugest.ao, www.algugest.ao  e CADDY_TLS vazio
+#                  (o Caddy emite HTTPS Let's Encrypt sozinho; o DNS já aponta para o VPS).
+# Ensaio local:    SITE_ADDRESS=algugest.localhost            e CADDY_TLS=tls internal
+#                  (CA interna do Caddy para HTTPS no teu PC).
+{$SITE_ADDRESS:algugest.ao, www.algugest.ao} {
+	{$CADDY_TLS}
+	encode gzip
+
+	# Permite uploads grandes (vídeos até 50 MB + overhead multipart)
+	request_body {
+		max_size 64MB
+	}
+
+	reverse_proxy app:3000
+}

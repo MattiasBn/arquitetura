@@ -1,0 +1,66 @@
+# Blueprint do Render (https://render.com/docs/blueprint-spec)
+#
+# Como usar:
+#   1. Faz upload deste repositório para o GitHub/GitLab.
+#   2. No Render: New + Blueprint, escolhe o repositório e este ficheiro.
+#   3. O Render pede os segredos marcados com "sync: false" — preenche-os
+#      no painel (Dashboard do serviço > Environment).
+#
+# Os valores abaixo NÃO contêm segredos: ficam a_marked no painel.
+
+services:
+  - type: web
+    name: algugest
+    runtime: docker
+    # Plano grátis: adormece após 15 min sem visitas (arranque frio ~30-60 s).
+    # Para um site de negócio, o plano "starter" (7 $/mês) é melhor.
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
+
+      # Domínio final (usado nos metadados e canonical URLs).
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
+
+      # --- Aiven (MySQL 8) ---
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      # A Aiven exige TLS cifrado.
+      - key: DB_SSL
+        value: "true"
+      # O certificado público da Aiven vai no repositório (certs/aiven-ca.pem),
+      # por isso não é preciso colar aqui o CA.
+      - key: DB_SSL_CA_FILE
+        value: certs/aiven-ca.pem
+
+      # --- Cloudinary (uploads) ---
+      # cloudinary://API_KEY:API_SECRET@CLOUD_NAME
+      - key: CLOUDINARY_URL
+        sync: false
+      - key: CLOUDINARY_FOLDER
+        value: algugest
+
+      # --- Sessão do admin ---
+      # O utilizador admin já foi criado na base de dados, por isso estas
+      # variáveis só são usadas na primeira execução (semeadura).
+      - key: ADMIN_SECRET
+        sync: false
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

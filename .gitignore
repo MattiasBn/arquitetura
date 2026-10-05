@@ -23,6 +23,8 @@
 # misc
 .DS_Store
 *.pem
+# ...mas o certificado público da Aiven precisa de ir com o código.
+!certs/*.pem
 
 # debug
 npm-debug.log*
@@ -32,6 +34,14 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# conteúdo gerado em runtime (vive no servidor, não no git)
+/data/
+/public/imagens/uploads/
+
+# vídeos originais (backup local antes da compressão)
+/video-originais/
 
 # vercel
 .vercel

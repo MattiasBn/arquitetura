@@ -1,0 +1,37 @@
+# Base de dados MySQL para desenvolvimento local.
+#
+# Corre apenas o MySQL em Docker e a app com `npm run dev` no teu PC:
+#   docker compose -f docker-compose.dev.yml up -d
+#   npm run dev
+#
+# Os valores por omissão coincidem com os defaults em src/lib/server/db.ts.
+#
+# Projeto Compose próprio ("algugest-dev") para não colidir com a stack de
+# produção (`docker-compose.yml`, projeto "arquitetura").
+name: algugest-dev
+
+services:
+  db:
+    image: mysql:8.4
+    container_name: algugest-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: algugest
+      MYSQL_DATABASE: algugest
+      MYSQL_USER: algugest
+      MYSQL_PASSWORD: algugest
+    ports:
+      - "3306:3306"
+    volumes:
+      - algugest_db_dev:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+volumes:
+  # Nome fixo para reaproveitar o volume de desenvolvimento já existente.
+  algugest_db_dev:
+    name: arquitetura_algugest_db_dev
