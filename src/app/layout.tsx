@@ -31,7 +31,7 @@ const KEYWORDS = [
 ];
 
 const IMAGEM_OG = {
-  url: "/imagens/empresa/og-algugest.jpg",
+  url: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284957/algugest/imagens/empresa/og-algugest.jpg",
   width: 1200,
   height: 630,
   alt: `${NOME} — construção civil, obras públicas e telecomunicações em Luanda, Angola`,

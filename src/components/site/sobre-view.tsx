@@ -28,22 +28,22 @@ type SiteContent = {
 
 // Galeria "no terreno" com as fotografias reais das obras.
 const GALLERY = [
-  "/imagens/obras/obra-01.jpg",
-  "/imagens/edificios/obra-12.jpg",
-  "/imagens/obras/obra-04.jpg",
-  "/imagens/telecomunicacoes/obra-08.jpg",
-  "/imagens/edificios/edificio.jpg",
-  "/imagens/obras/obra-02.jpg",
-  "/imagens/edificios/obra-16.jpg",
-  "/imagens/obras/obra-05.jpg",
-  "/imagens/edificios/obra-15.jpg",
-  "/imagens/construcao-civil/obra-20.jpg",
-  "/imagens/telecomunicacoes/obra-11.jpg",
-  "/imagens/obras/obra-03.jpg",
-  "/imagens/edificios/obra-17.jpg",
-  "/imagens/obras/obra-07.jpg",
-  "/imagens/obras/obra-18.jpg",
-  "/imagens/obras/obra-19.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285140/algugest/imagens/obras/obra-01.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791284929/algugest/imagens/edificios/obra-12.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285145/algugest/imagens/obras/obra-04.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285158/algugest/imagens/telecomunicacoes/obra-08.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791284926/algugest/imagens/edificios/edificio.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285142/algugest/imagens/obras/obra-02.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791284931/algugest/imagens/edificios/obra-16.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285147/algugest/imagens/obras/obra-05.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791284930/algugest/imagens/edificios/obra-15.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791284908/algugest/imagens/construcao-civil/obra-20.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285163/algugest/imagens/telecomunicacoes/obra-11.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285143/algugest/imagens/obras/obra-03.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791284933/algugest/imagens/edificios/obra-17.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285149/algugest/imagens/obras/obra-07.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285152/algugest/imagens/obras/obra-18.jpg",
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791285153/algugest/imagens/obras/obra-19.jpg",
 ];
 
 const stats = [
@@ -206,7 +206,7 @@ export default function SobreView({
               <Tilt max={6} scale={1.02} className="relative">
                 <div className="relative overflow-hidden rounded-lg bg-surface">
                   <Image
-                    src="/imagens/empresa/equipa.jpeg"
+                    src="https://res.cloudinary.com/z50slpsg/image/upload/v1791284941/algugest/imagens/empresa/equipa.jpg"
                     alt="Equipa da Algugest no terreno"
                     width={1200}
                     height={900}

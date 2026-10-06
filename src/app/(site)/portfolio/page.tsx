@@ -33,33 +33,33 @@ type Project = {
   category: Category;
 };
 
-// 18 fotos de obra, agrupadas por contexto em /imagens/obras e por serviço.
+// 18 fotos de obra, agrupadas por serviço. As imagens vivem na Cloudinary.
 const PROJECTS: Project[] = [
-  { id: 1, image: "/imagens/telecomunicacoes/obra-08.jpg", category: "Telecomunicações" },
-  { id: 2, image: "/imagens/obras/obra-02.jpg", category: "Construção & Edifícios" },
-  { id: 3, image: "/imagens/construcao-civil/obra-20.jpg", category: "Obras Públicas" },
-  { id: 4, image: "/imagens/obras/obra-18.jpg", category: "Telecomunicações" },
-  { id: 5, image: "/imagens/obras/obra-07.jpg", category: "Construção & Edifícios" },
-  { id: 6, image: "/imagens/obras/obra-01.jpg", category: "Obras Públicas" },
-  { id: 7, image: "/imagens/telecomunicacoes/obra-11.jpg", category: "Telecomunicações" },
-  { id: 8, image: "/imagens/edificios/obra-12.jpg", category: "Construção & Edifícios" },
-  { id: 9, image: "/imagens/obras/obra-19.jpg", category: "Obras Públicas" },
-  { id: 10, image: "/imagens/obras/obra-05.jpg", category: "Telecomunicações" },
-  { id: 11, image: "/imagens/edificios/obra-15.jpg", category: "Construção & Edifícios" },
-  { id: 12, image: "/imagens/obras/obra-06.jpg", category: "Obras Públicas" },
-  { id: 13, image: "/imagens/telecomunicacoes/obra-09.jpg", category: "Telecomunicações" },
-  { id: 14, image: "/imagens/edificios/obra-16.jpg", category: "Construção & Edifícios" },
-  { id: 15, image: "/imagens/obras/obra-04.jpg", category: "Obras Públicas" },
-  { id: 16, image: "/imagens/edificios/obra-17.jpg", category: "Construção & Edifícios" },
-  { id: 17, image: "/imagens/obras/obra-10.jpg", category: "Construção & Edifícios" },
-  { id: 18, image: "/imagens/obras/obra-03.jpg", category: "Construção & Edifícios" },
+  { id: 1, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285158/algugest/imagens/telecomunicacoes/obra-08.jpg", category: "Telecomunicações" },
+  { id: 2, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285142/algugest/imagens/obras/obra-02.jpg", category: "Construção & Edifícios" },
+  { id: 3, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284908/algugest/imagens/construcao-civil/obra-20.jpg", category: "Obras Públicas" },
+  { id: 4, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285152/algugest/imagens/obras/obra-18.jpg", category: "Telecomunicações" },
+  { id: 5, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285149/algugest/imagens/obras/obra-07.jpg", category: "Construção & Edifícios" },
+  { id: 6, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285140/algugest/imagens/obras/obra-01.jpg", category: "Obras Públicas" },
+  { id: 7, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285163/algugest/imagens/telecomunicacoes/obra-11.jpg", category: "Telecomunicações" },
+  { id: 8, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284929/algugest/imagens/edificios/obra-12.jpg", category: "Construção & Edifícios" },
+  { id: 9, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285153/algugest/imagens/obras/obra-19.jpg", category: "Obras Públicas" },
+  { id: 10, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285147/algugest/imagens/obras/obra-05.jpg", category: "Telecomunicações" },
+  { id: 11, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284930/algugest/imagens/edificios/obra-15.jpg", category: "Construção & Edifícios" },
+  { id: 12, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285148/algugest/imagens/obras/obra-06.jpg", category: "Obras Públicas" },
+  { id: 13, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285160/algugest/imagens/telecomunicacoes/obra-09.jpg", category: "Telecomunicações" },
+  { id: 14, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284931/algugest/imagens/edificios/obra-16.jpg", category: "Construção & Edifícios" },
+  { id: 15, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285145/algugest/imagens/obras/obra-04.jpg", category: "Obras Públicas" },
+  { id: 16, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284933/algugest/imagens/edificios/obra-17.jpg", category: "Construção & Edifícios" },
+  { id: 17, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285151/algugest/imagens/obras/obra-10.jpg", category: "Construção & Edifícios" },
+  { id: 18, image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285143/algugest/imagens/obras/obra-03.jpg", category: "Construção & Edifícios" },
 ];
 
 const VIDEOS = [
-  { src: "/videos/obra-01.mp4", eager: true, label: "Destaque em vídeo" },
-  { src: "/videos/obra-02.mp4", eager: false, label: undefined },
-  { src: "/videos/obra-03.mp4", eager: false, label: undefined },
-  { src: "/videos/obra-04.mp4", eager: false, label: undefined },
+  { src: "https://res.cloudinary.com/z50slpsg/video/upload/v1791285442/algugest/videos/obra-01.mp4", eager: true, label: "Destaque em vídeo" },
+  { src: "https://res.cloudinary.com/z50slpsg/video/upload/v1791285445/algugest/videos/obra-02.mp4", eager: false, label: undefined },
+  { src: "https://res.cloudinary.com/z50slpsg/video/upload/v1791285447/algugest/videos/obra-03.mp4", eager: false, label: undefined },
+  { src: "https://res.cloudinary.com/z50slpsg/video/upload/v1791285450/algugest/videos/obra-04.mp4", eager: false, label: undefined },
 ] as const;
 
 const CATEGORIES: Array<"Todos" | Category> = [

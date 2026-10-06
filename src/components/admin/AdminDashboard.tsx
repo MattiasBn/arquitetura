@@ -79,7 +79,7 @@ export function AdminDashboard() {
       <div className="flex flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-4">
           <Image
-            src="/imagens/empresa/emblema-algugest.png"
+            src="https://res.cloudinary.com/z50slpsg/image/upload/v1791284939/algugest/imagens/empresa/emblema-algugest.png"
             alt="Algugest"
             width={56}
             height={56}

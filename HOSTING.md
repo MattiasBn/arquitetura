@@ -65,8 +65,17 @@ não é preciso os definir (e é melhor não os ter expostos).
 - Os URLs da Cloudinary (`https://res.cloudinary.com/...`) são absolutos e
   permitidos em `next.config.ts` (`images.remotePatterns`), por isso
   `next/image` continua a otimizá-los.
+- **Toda a media já existente (106 ficheiros, ~42 MB) foi migrada** para a
+  Cloudinary e as referências no conteúdo (tabela `content`, `data/content.json`)
+  e no código foram trocadas. O que está em `public/` passa a ser apenas cópia
+  de segurança local — nada o referencia já no site.
 - O conteúdo (textos, destaques, serviços) vive na base de dados. Se mudares de
   base de dados, exporta/importa a tabela `content`.
+- Migração de media (só quando mudares de site/máquina):
+  `node scripts/migrate-media.mjs` envia `public/` para a cloud e grava o mapa
+  em `data/migracao-cloudinary.json`; `node scripts/rewrite-refs.mjs` troca as
+  referências no código; `node scripts/rewrite-db.mjs` faz o mesmo na tabela
+  `content`. Todos são idempotentes — podem correr mais do que uma vez.
 - As fotografias e vídeos já existentes em `public/imagens` **continuam a ser
   servidos pelo próprio site** — a Cloudinary passa a ser usada para os novos
   uploads e para os que carregares no `/admin`.

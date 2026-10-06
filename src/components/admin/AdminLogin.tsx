@@ -215,7 +215,7 @@ export function AdminLogin() {
             />
             <div className="relative grid size-20 place-items-center rounded-2xl bg-white/10 ring-1 ring-white/15 backdrop-blur">
               <Image
-                src="/imagens/empresa/emblema-algugest.png"
+                src="https://res.cloudinary.com/z50slpsg/image/upload/v1791284939/algugest/imagens/empresa/emblema-algugest.png"
                 alt="Algugest"
                 width={64}
                 height={64}

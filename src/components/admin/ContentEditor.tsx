@@ -346,7 +346,7 @@ export function ContentEditor() {
           <div className="flex items-center justify-between border-b border-slate-200 bg-white px-6 py-3">
             <div className="flex items-center gap-3">
               <Image
-                src="/imagens/empresa/emblema-algugest.png"
+                src="https://res.cloudinary.com/z50slpsg/image/upload/v1791284939/algugest/imagens/empresa/emblema-algugest.png"
                 alt="Algugest"
                 width={40}
                 height={40}

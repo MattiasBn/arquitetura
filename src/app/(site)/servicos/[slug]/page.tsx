@@ -31,7 +31,7 @@ export async function generateMetadata({
       type: "article",
       images: service.images[0]
         ? [{ url: service.images[0] }]
-        : [{ url: "/imagens/empresa/og-algugest.jpg" }],
+        : [{ url: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284957/algugest/imagens/empresa/og-algugest.jpg" }],
     },
   };
 }

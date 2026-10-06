@@ -86,7 +86,7 @@ export default function ServicosView({
           loop
           playsInline
           preload="metadata"
-          src="/headervideos/v002.mp4"
+          src="https://res.cloudinary.com/z50slpsg/video/upload/v1791285260/algugest/headervideos/v002.mp4"
           className="absolute inset-0 h-full w-full object-cover opacity-55"
         >
           O teu navegador não suporta vídeos HTML5.

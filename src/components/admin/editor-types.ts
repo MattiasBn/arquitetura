@@ -61,7 +61,7 @@ export function makeDestaque(): Destaque {
     id: `destaque-${Date.now()}`,
     title: "Novo destaque",
     text: "Escreva aqui a descrição do destaque.",
-    image: "/imagens/obras/obra-01.jpg",
+    image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285140/algugest/imagens/obras/obra-01.jpg",
     date: new Date().toISOString().slice(0, 10),
   };
 }

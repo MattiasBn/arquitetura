@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Logótipo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/imagens/empresa/emblema-algugest.png"
+            src="https://res.cloudinary.com/z50slpsg/image/upload/v1791284939/algugest/imagens/empresa/emblema-algugest.png"
             alt="Algugest Serviços"
             width={44}
             height={44}

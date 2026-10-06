@@ -34,11 +34,11 @@ export function whatsappLink(message?: string): string {
  * Editável no admin (Início → Vídeos do carrossel).
  */
 export const HERO_VIDEOS = [
-  "/headervideos/v002.mp4",
-  "/headervideos/v005.mp4",
-  "/headervideos/v007.mp4",
-  "/headervideos/v004.mp4",
-  "/headervideos/v006.mp4",
+  "https://res.cloudinary.com/z50slpsg/video/upload/v1791285260/algugest/headervideos/v002.mp4",
+  "https://res.cloudinary.com/z50slpsg/video/upload/v1791285431/algugest/headervideos/v005.mp4",
+  "https://res.cloudinary.com/z50slpsg/video/upload/v1791285435/algugest/headervideos/v007.mp4",
+  "https://res.cloudinary.com/z50slpsg/video/upload/v1791285430/algugest/headervideos/v004.mp4",
+  "https://res.cloudinary.com/z50slpsg/video/upload/v1791285433/algugest/headervideos/v006.mp4",
 ];
 
 /**
@@ -51,19 +51,19 @@ export const HOME_IMAGES: {
   equipa: string;
   projetos: Array<{ alt: string; image: string }>;
 } = {
-  edificio: "/imagens/edificios/edificio.jpg",
-  equipa: "/imagens/empresa/equipa.jpeg",
+  edificio: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284926/algugest/imagens/edificios/edificio.jpg",
+  equipa: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284941/algugest/imagens/empresa/equipa.jpg",
   projetos: [
-    { alt: "Obra 1", image: "/imagens/obras/obra-01.jpg" },
-    { alt: "Obra 2", image: "/imagens/obras/obra-02.jpg" },
-    { alt: "Obra 3", image: "/imagens/obras/obra-03.jpg" },
-    { alt: "Obra 4", image: "/imagens/obras/obra-04.jpg" },
-    { alt: "Obra 5", image: "/imagens/obras/obra-05.jpg" },
-    { alt: "Obra 6", image: "/imagens/obras/obra-06.jpg" },
-    { alt: "Obra 7", image: "/imagens/obras/obra-07.jpg" },
-    { alt: "Obra 8", image: "/imagens/obras/obra-10.jpg" },
-    { alt: "Obra 9", image: "/imagens/obras/obra-18.jpg" },
-    { alt: "Obra 10", image: "/imagens/obras/obra-19.jpg" },
+    { alt: "Obra 1", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285140/algugest/imagens/obras/obra-01.jpg" },
+    { alt: "Obra 2", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285142/algugest/imagens/obras/obra-02.jpg" },
+    { alt: "Obra 3", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285143/algugest/imagens/obras/obra-03.jpg" },
+    { alt: "Obra 4", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285145/algugest/imagens/obras/obra-04.jpg" },
+    { alt: "Obra 5", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285147/algugest/imagens/obras/obra-05.jpg" },
+    { alt: "Obra 6", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285148/algugest/imagens/obras/obra-06.jpg" },
+    { alt: "Obra 7", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285149/algugest/imagens/obras/obra-07.jpg" },
+    { alt: "Obra 8", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285151/algugest/imagens/obras/obra-10.jpg" },
+    { alt: "Obra 9", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285152/algugest/imagens/obras/obra-18.jpg" },
+    { alt: "Obra 10", image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285153/algugest/imagens/obras/obra-19.jpg" },
   ],
 };
 
@@ -86,21 +86,21 @@ export const DESTAQUES: Destaque[] = [
     id: "destaque-1",
     title: "Telecomunicações concluídas em Talatona",
     text: "Concluímos a instalação e manutenção de infraestrutura de telecomunicações numa nova urbanização em Talatona, com entrega dentro do prazo e sem interrupções.",
-    image: "/imagens/telecomunicacoes/obra-08.jpg",
+    image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791285158/algugest/imagens/telecomunicacoes/obra-08.jpg",
     date: "2026-01-20",
   },
   {
     id: "destaque-2",
     title: "Nova frente de obras públicas na Via Expressa",
     text: "Arrancaram os trabalhos de construção civil e obras públicas na Via Expressa, reforçando a nossa presença em Luanda com equipas e equipamento próprios.",
-    image: "/imagens/construcao-civil/obra-20.jpg",
+    image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284908/algugest/imagens/construcao-civil/obra-20.jpg",
     date: "2026-02-05",
   },
   {
     id: "destaque-3",
     title: "Equipa reforçada para 2026",
     text: "Alargámos o nosso quadro técnico com novos colaboradores especializados, para responder com ainda mais rapidez aos projetos dos nossos clientes.",
-    image: "/imagens/empresa/equipa.jpeg",
+    image: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284941/algugest/imagens/empresa/equipa.jpg",
     date: "2026-02-18",
   },
 ];

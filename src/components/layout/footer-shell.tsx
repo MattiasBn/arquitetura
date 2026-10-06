@@ -31,7 +31,7 @@ export default function FooterShell({ contacts }: { contacts: Contacts }) {
           <div>
             <div className="flex items-center gap-3">
               <Image
-                src="/imagens/empresa/logotipo-algugest.png"
+                src="https://res.cloudinary.com/z50slpsg/image/upload/v1791284949/algugest/imagens/empresa/logotipo-algugest.png"
                 alt="Algugest Serviços"
                 width={56}
                 height={56}
