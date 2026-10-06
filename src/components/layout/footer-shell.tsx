@@ -71,14 +71,14 @@ export default function FooterShell({ contacts }: { contacts: Contacts }) {
               <li>
                 <Ed id="contacts.phoneWhatsApp" label="WhatsApp" block={false}>
                   <a href={waLink} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
-                    WhatsApp +{phoneWhatsApp ? `244 ${phoneWhatsApp}` : "244 950 521 741"}
+                    WhatsApp +{phoneWhatsApp ? `244 ${phoneWhatsApp}` : "nao disponivel no momento"}
                   </a>
                 </Ed>
               </li>
               <li>
                 <Ed id="contacts.phoneCall" label="Chamada normal" block={false}>
                   <a href={`tel:${callNumber}`} className="transition-colors hover:text-white">
-                    Chamada +{phoneCall ? `244 ${phoneCall}` : "244 925 212 282"}
+                    Chamada +{phoneCall ? `244 ${phoneCall}` : "nao disponivel no momento"}
                   </a>
                 </Ed>
               </li>
@@ -117,9 +117,14 @@ export default function FooterShell({ contacts }: { contacts: Contacts }) {
               © {new Date().getFullYear()} {contacts.legalName}. Todos os direitos reservados.
             </p>
           </Ed>
-          <Link href="/admin" className="transition-colors hover:text-white">
-            .....
-          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:justify-end">
+            <Link href="/privacidade" className="transition-colors hover:text-white">
+              Política de Privacidade
+            </Link>
+            <Link href="/admin" className="transition-colors hover:text-white">
+              .....
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

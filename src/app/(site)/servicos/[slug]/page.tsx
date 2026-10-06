@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 
 import { SERVICES } from "@/data/services";
 import { getServiceBySlug, getServices } from "@/lib/server/content";
-import { CONTACTS, SITE_URL } from "@/lib/site";
+import { CONTACTS, OG_IMAGE, SITE_URL } from "@/lib/site";
 import ServiceDetailView from "@/components/site/service-detail-view";
 import type { ServiceType } from "@/components/site/servicos-view";
 
@@ -31,7 +31,7 @@ export async function generateMetadata({
       type: "article",
       images: service.images[0]
         ? [{ url: service.images[0] }]
-        : [{ url: "https://res.cloudinary.com/z50slpsg/image/upload/v1791284957/algugest/imagens/empresa/og-algugest.jpg" }],
+        : [{ url: OG_IMAGE }],
     },
   };
 }

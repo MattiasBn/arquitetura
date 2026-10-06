@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Clapperboard } from "lucide-react";
 
-import { HERO_VIDEOS } from "@/lib/site";
+import { HERO_VIDEOS, OG_IMAGE } from "@/lib/site";
 import { Ed } from "@/components/admin/editing-context";
 
 export default function HeroVideoSection({
@@ -72,7 +72,10 @@ export default function HeroVideoSection({
         autoPlay
         muted
         playsInline
-        preload="auto"
+        // "auto" descarregava o video inteiro antes de comecar a tocar, atrasando
+        // as imagens da pagina. Com "metadata" comeca a tocar e baixa a medida.
+        preload="metadata"
+        poster={OG_IMAGE}
         src={playlistVideos[currentVideoIndex % playlistVideos.length]}
         onEnded={handleVideoEnded}
         onError={(e) => console.error("Erro ao carregar o vídeo do carrossel:", e)}

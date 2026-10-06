@@ -97,7 +97,7 @@ export function AboutImpactSection({
             src={edificio}
             alt="Edifício imponente de arquitectura moderna"
             fill
-            quality={100}
+            quality={85}
             sizes="100vw"
             className="object-cover object-top"
             priority
@@ -248,7 +248,7 @@ export function AboutImpactSection({
                     src={activeProject.image}
                     alt={activeProject.alt}
                     fill
-                    quality={100}
+                    quality={85}
                     sizes="100vw"
                     className="object-contain"
                     priority

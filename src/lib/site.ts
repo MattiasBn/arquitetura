@@ -7,6 +7,13 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://algugest.ao";
 
+/**
+ * Imagem institucional usada no OpenGraph (partilha em redes) e como póster do
+ * vídeo do hero — aparece de imediato enquanto o vídeo ainda carrega.
+ */
+export const OG_IMAGE =
+  "https://res.cloudinary.com/z50slpsg/image/upload/v1791284957/algugest/imagens/empresa/og-algugest.jpg";
+
 export const CONTACTS = {
   legalName: "ALGUGEST - SERVIÇOS, (SU), LDA",
   brandName: "Algugest",

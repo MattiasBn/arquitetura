@@ -394,7 +394,7 @@ export default function PortfolioPage() {
                     src={activeProject.image}
                     alt={`Obra de ${activeProject.category}`}
                     fill
-                    quality={100}
+                    quality={85}
                     sizes="100vw"
                     className="object-contain"
                     priority

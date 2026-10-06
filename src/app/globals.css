@@ -70,6 +70,44 @@
 
 @utility shadow-3d-hover {
   box-shadow:
-    0 2px 4px 0 rgb(16 24 40 / 8%),
+    0 2px 4px 0 rgb(16 24 40 / 6%),
     0 18px 40px -18px rgb(16 24 40 / 28%);
+}
+
+/* ---------------------------------------------------------------------------
+   Indicador de carregamento de media (imagens e vídeos).
+   Enquanto o browser ainda não tem os bytes, a caixa mostra um brilho a
+   deslizar — o utilizador percebe que a imagem está a carregar. Assim que
+   termina, o MediaLoader marca o elemento e a animação desaparece.
+   Só ativa com JS (html.js-media): sem JS as imagens ficam como sempre.
+--------------------------------------------------------------------------- */
+@keyframes media-shimmer {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
+}
+
+html.js-media img:not(.media-ok):not([src=""]),
+html.js-media video:not(.media-ok) {
+  background-color: rgba(148, 163, 184, 0.14);
+  background-image: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 75%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: media-shimmer 1.5s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js-media img:not(.media-ok):not([src=""]),
+  html.js-media video:not(.media-ok) {
+    animation: none;
+    background-image: none;
+  }
 }
